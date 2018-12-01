@@ -1,0 +1,22 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.mmm_header{
+    .tit{
+        text-align: center;
+        line-height: 100rem / @base;
+        span{
+            color: #fff;
+            font-size: 35rem / @base;
+        }
+    }
+}

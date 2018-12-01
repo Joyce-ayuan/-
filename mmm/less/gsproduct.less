@@ -1,0 +1,139 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.dropDown{
+    height: 80rem/@base;
+    border-bottom: 2rem/@base solid #ccc;
+    background-color: #fff;
+    .icon{
+        width: 90rem/@base;
+        height: 80rem/@base;
+        float: right;
+        text-align: center;
+        border-left: 2rem/@base solid #ccc;
+        i{
+            font-size: 60rem/@base;
+            line-height: 80rem/@base;
+            color: #666;
+        }
+    }
+    .left{
+        height: 100%;
+        overflow: hidden;
+        ul{
+            height: 100%;
+            li{
+                width: 33.33%;
+                height: 100%;
+                text-align: center;
+                float: left;
+                line-height: 80rem/@base;
+                a{
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.downInfo{
+    z-index: 9999;
+    ul{
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        &.active{
+            display: block;
+        }
+        li{
+            height: 100%;
+            width: 100%;
+            border-bottom: 2rem/@base solid #ccc;
+            position: relative;
+            a{
+                display: block;
+                p{
+                    color: #666;
+                    line-height: 80rem/@base;
+                    padding-left: 20rem/@base;
+                }
+                .tip{
+                    display: none;
+                    width: 100rem/@base;
+                    height: 100rem/@base;
+                    position: absolute;
+                    top: 15rem/@base;
+                    right: 0rem/@base;
+                    color: @mmmColor;
+                    font-size: 30rem/@base;
+                }
+            }
+
+        }
+    }
+}
+
+.downInfo .info1Ul{
+    display: none;
+    &.tog{
+        display: block;
+    }
+}
+.downInfo .info2Ul{
+    display: none;
+    &.tog{
+        display: block;
+    }
+}
+
+.content{
+    background-color: #F1F1F1;
+    ul{
+        padding-left: 20rem/@base;
+        li{
+            width: 47%;
+            float: left;
+            height: 500rem/@base;
+            background-color: #fff;
+            margin-right: 20rem/@base;
+            padding: 20rem/@base;
+            margin-top: 20rem/@base;
+            a{
+                .imgBox{
+                    height: 330rem/@base;
+                    width: 100%;
+                }
+                p{
+                    margin-top: 20rem/@base;
+                    font-size: 20rem/@base;
+                    color: #000;
+                }
+                .down{
+                    margin-top: 15rem/@base;
+                    height: 55rem/@base;
+                    span{
+                        color: @mmmColor;
+                        line-height: 55rem/@base;
+                    }
+                    button{
+                        width: 125rem/@base;
+                        height: 55rem/@base;
+                        background-color: @mmmColor;
+                        color: #fff;
+                        border-radius: 10rem/@base;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}

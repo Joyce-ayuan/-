@@ -1,0 +1,191 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #F4483E;
+
+.color{
+    background-color: @mmmColor;
+}
+
+.nav{
+    height: 80rem / @base;
+    position: relative;
+    .box{
+        width: 675rem/@base;
+        overflow: hidden;
+        height: 80rem / @base;
+        ul{
+            height: 80rem/@base;
+            padding-left: 20rem/@base;
+            li{
+                // float: left;
+                display: inline-block;
+                padding: 10rem / @base;
+                a{
+                    font-size: 20rem / @base;
+                    color: #000;
+                    border-bottom: @mmmColor;
+                    display: block;
+                    padding: 10rem / @base;
+                    &.underline{
+                        border-bottom: 2px solid @mmmColor;
+                    }
+                }
+
+            }
+        }
+    }
+    .search{
+        width: 75rem/@base;
+        height: 80rem / @base;
+        position: absolute;
+        top: 0;
+        right: 0rem/@base;
+        text-align: center;
+        i{
+            font-size: 50rem/@base;
+            color: #565656;
+            z-index: 9999;
+            line-height: 80rem / @base;
+        }
+    }
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+    .infoBox{
+        height: 300rem/@base;
+        .imgBox{
+            width: 265rem/@base;
+            height: 265rem/@base;
+            border: 1px solid #000;
+            float: left;
+            margin-top: 18rem/@base;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .item{
+            height: 300rem/@base;
+            overflow: hidden;
+            padding: 20rem/@base;
+            position: relative;
+            .name{
+                font-size: 25rem/@base;
+                color: #000;
+                margin-top: 20rem/@base;
+            }
+            .price{
+                font-size: 30rem/@base;
+                color: #666;
+                color: @mmmColor;
+                margin-top: 20rem/@base;
+                em{
+                    color: @mmmColor;
+                }
+                del{
+                    color: #BFB7B8;
+                    margin-left: 20rem/@base;
+                }
+                
+            }
+            .remain{
+                margin-top: 20rem/@base;
+                color: @mmmColor;
+                .bar{
+                    width: 165rem/@base;
+                    height: 25rem/@base;
+                    background: #FFB7B7;
+                    border-radius: 10rem/@base;
+                    border: 2px solid @mmmColor;
+                    position: relative;
+                    text-align: center;
+
+                    b{
+                        position: absolute;
+                        top: -5rem/@base;
+                        right: -200rem/@base;
+                    }
+                    i{
+                        display: block;
+                        color: #fff;
+                        font-size: 20rem/@base;
+                        em{
+                            height: 100%;
+                            background-color: @mmmColor;
+                            border-radius: 10rem/@base;
+                            position: absolute;
+                            top: -2rem/@base;
+                            left: 0;
+                            font-style: normal;
+                            border: 2px solid @mmmColor;
+                            border-radius: 10rem/@base;
+                        }
+                        span{
+                            position: relative;
+                            top: -5rem/@base;
+                            z-index: 999;
+                        }
+                    }
+
+                }
+            }
+            .downBox{
+                height: 60rem/@base;
+                position: relative;
+                margin-top: 20rem/@base;
+                .btn{
+                    width: 215rem / @base;
+                    height: 50rem / @base;
+                    border: 1px dashed @mmmColor;
+                    text-align: center;
+                    line-height: 50rem / @base;
+                    margin-top: 20rem/@base;
+                    a{
+                        color: @mmmColor;
+                    }
+                }
+                .href{
+                    width: 120rem/@base;
+                    height: 60rem/@base;
+                    border-radius: 10rem/@base;
+                    background-color: @mmmColor;
+                    text-align: center;
+                    line-height: 60rem/@base;
+                    position: absolute;
+                    right: 20rem/@base;
+                    bottom: 0/@base;
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#arrow{
+    width: 80rem/@base;
+    height: 80rem/@base;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    right: 20rem/@base;
+    bottom: 20rem/@base;
+    z-index: 999;
+    text-align: center;
+    i{
+        font-size: 60rem/@base;
+        color: rgba(231, 230, 230, 0.7);
+        line-height: 80rem/@base;
+    }
+}

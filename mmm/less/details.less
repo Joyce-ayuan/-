@@ -1,0 +1,195 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.breadcrumb {
+    height: 75rem / @base;
+    border-bottom: 1rem / @base solid #CACACA;
+    border-top: 1rem / @base solid #CACACA;
+    background-image: linear-gradient(to top, #EDEDED, #fff);
+    p {
+        display: inline-block;
+        font-size: 25rem / @base;
+        color: #000;
+        padding-left: 20rem / @base;
+        line-height: 75rem / @base;
+        a {
+            color: #000;
+        }
+    }
+    button {
+        width: 125rem / @base;
+        height: 55rem / @base;
+        float: right;
+        margin-top: 8rem / @base;
+        margin-right: 15rem / @base;
+        border-radius: 10rem / @base;
+        font-size: 30rem / @base;
+    }
+}
+
+.details_img{
+    p{
+        font-size: 25rem / @base;
+        text-align: center;
+        margin-top: 30rem / @base;
+        color: #000;
+        padding-left: 80rem / @base;
+        padding-right: 80rem / @base;
+    }
+    .imgBox{
+        width: 340rem /@base;
+        height: 340rem /@base;
+        margin: 0 auto;
+    }
+    .collect{
+        height: 50rem / @base;
+        position: relative;
+        i{
+            font-size: 50rem / @base;
+            color: #96D700;
+            position: absolute;
+            top: -10rem / @base;
+            right: 20rem / @base;
+        }
+    }
+}
+
+.details_nav{
+    height: 65rem / @base;
+    background-color: #FFC730;
+    margin-top: 20rem / @base;
+    ul{
+        height: 65rem / @base;
+        border-top: 1px solid #C14D00;
+        border-bottom: 1px solid #C14D00;
+        li{
+            float: left;
+            width: 33.33%;
+            border-right: 1px solid #C14D00;
+            line-height: 65rem / @base;
+            font-size: 25rem / @base;
+            text-align: center;
+            overflow: hidden;
+            &:last-child{
+                border-right: none;
+            }
+            a{
+                color: #fff;
+                display: block;
+                height: 63rem / @base;
+            }
+            .current{
+                background-color: #FF9D1E;
+            }
+        }
+    }
+}
+
+.details_shopping{
+    height: 80rem / @base;
+    border-bottom: 1px solid #B4B4B4;
+    line-height: 85rem / @base;
+    padding-left: 20rem / @base;
+    padding-right: 20rem / @base;
+    table{
+        tbody{
+            tr{
+                &:first-child{
+                    td{
+                        &:first-child{
+                            width: 30rem / @base;
+                            height: 30rem / @base;
+                            vertical-align: middle;
+                        }  
+                        &:nth-child(2){
+                            font-size: 25rem / @base;
+                            a{
+                                padding-left: 30rem / @base;
+                            }
+                        }
+                        &:last-child{
+                            position: relative;
+                            span{
+                                position: absolute;
+                                top: 30rem / @base;
+                                right: 5rem / @base;
+                            }
+                        }
+                    }
+                }
+                .red{
+                    font-size: 25rem / @base;
+                    color: #CD1359;
+                    text-align: right;
+                    padding-right: 20rem / @base;
+                }
+            }
+        }
+    }
+}
+
+.tips{
+    height: 120rem / @base;
+    border-bottom: 5rem / @base solid #767676;
+    p{
+        font-size: 20rem / @base;
+        color: #838485;
+        padding: 20rem / @base;
+    }
+}
+
+.details_comments{
+    .title{
+        height: 70rem / @base;
+        background-color: #DBDBDB;
+        text-align: center;
+        line-height: 70rem / @base;
+    }
+    .info{
+        font-size: 20rem / @base;
+        .infoBox{
+            border-bottom: 1px solid #555;
+            padding: 20rem / @base;
+            .top{
+                height: 110rem / @base;
+                padding: 30rem / @base 0;
+                .left{
+                    float: left;
+                }
+                .right{
+                    float: right;
+                    span{
+                        display: block;
+                        text-align: right;
+                    }
+                }
+            }
+            .down{
+                color: #000;
+            }
+        }
+    }
+}
+
+.moreCom{
+    height: 65rem / @base;
+    background-color: #D7D7D7;
+    text-align: center;
+    line-height: 65rem / @base;
+    margin-top: 20rem / @base;
+    a{
+        p{
+            font-size: 25rem / @base;
+            color: #000;
+        }
+    }
+}

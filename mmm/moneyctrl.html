@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/moneyctrl.css">
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mmm_container">
+        <!----------------- 顶部区域 ------------------>
+        <div class="mmm_header">
+            <div class="icon">
+                <a href="javascript:history.back()">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="tit">
+                <span>省钱控-最新优惠</span>
+            </div>
+            <div class="download">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!----------------- 商品列表 ------------------>
+        <div class="mmm_discount">
+            <div class="content">
+                <ul id="discountUl">
+                    <!-- 坑 -->
+                </ul>
+            </div>
+            <div class="paginator">
+                <span id="previous"><a href="#">上一页</a></span>
+                <span><select name="select" id="selectPage">
+                    
+                </select></span>
+                <span id="next"><a href="#">下一页</a></span>
+            </div>
+        </div>
+        <!----------------- 底部区域 ------------------>
+        <div class="footer">
+            <!-- 登录区域 -->
+            <div class="mmm_login">
+                <ul class="clearfix">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a id="toTop" href="#"> <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a></li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmm_under">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p> <a href="#">m.manmanbuy.com</a> </p>
+            </div>
+        </div>
+    </div>
+
+    <!----------------- 商品数据模板 ------------------>
+    <script type="text/html" id="contentTmp">
+        {{ each result v i }}
+            <li data-id="{{v.productId}}">
+                <div class="discountImgBox">
+                    {{#v.productImgSm}}
+                </div>
+                <div class="right">
+                    <a href="#"></a><p>{{v.productName}}</p></a>
+                    <a href="#"></a><p class="color">{{v.productPinkage}}</p></a>
+                    <a href="#"></a><span>{{v.productFrom}}|{{v.productTime}}</span></a>
+                    <div class="comment">
+                        <a href="#">
+                            <i class="fa fa-commenting-o"></i>
+                            <p>{{v.productComCount.replace("有","").replace("人评论","")}}</p>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        {{ /each }}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/moneyctrl.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #F4483E;
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+.tips{
+    height: 50rem/@base;
+    width: 100%;
+    p{
+        text-align: center;
+        line-height: 60rem/@base;
+        color: #666;
+        font-size: 20rem/@base;
+    }
+}
+
+.content{
+    width: 100%;
+    li{
+        width: 100%;
+        height: 280rem/@base;
+        border-bottom: 1px solid #ccc;
+        padding: 20rem/@base;
+        a{
+            width: 100%;
+            height: 100%;
+            display: block;
+            .imgBox{
+                width: 210rem/@base;
+                height: 230rem/@base;
+                float: left;
+                margin-top: 5rem/@base;
+            }
+            .right{
+                overflow: hidden;
+                height: 100%;
+                padding-left: 10rem/@base;
+                position: relative;
+                .desc{
+                    font-size: 25rem/@base;
+                    color: #000;
+                }
+                .price{
+                    font-size: 25rem/@base;
+                    color: #000;
+                    font-weight: 700;
+                    margin-top: 30rem/@base;
+                }
+                .time{
+                    color: #EE8235;
+                    font-size: 20rem/@base;
+                    position: absolute;
+                    bottom: 10rem/@base;
+                    left: 10rem/@base;
+                }
+            }
+        }
+
+    }
+}
+
+.modal{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    .box{
+        width: 340rem/@base;
+        height: 320rem/@base;
+        margin: 30% auto;
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
+            background-image: url('');
+        }
+        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+            background-image: url('');
+        }
+        .swiper-button-prev,
+        .swiper-button-next{
+            font-size: 70rem/@base;
+            line-height: 27rem/@base;
+            width: 80rem/@base;
+            height: 100rem/@base;
+            background-color: rgba(0,0,0,.5);
+            border-radius: 10rem/@base;
+            position: fixed;
+            top: 43%;
+            text-align: center;
+            i{
+                text-align: center;
+                margin-top: 7rem/@base;
+                color: #ccc;
+            }
+        }
+        .swiper-button-prev{
+            left: 10%;
+        }
+        .swiper-button-next{
+            left: 80%;
+        }
+    }
+}

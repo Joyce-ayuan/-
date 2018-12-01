@@ -1,0 +1,31 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.sort{
+    height: 75rem/@base;
+    background-color: #EEEEEE;
+    border: 1px solid #ccc;
+    margin: 10rem/@base;
+    p{
+        line-height: 75rem/@base;
+        padding-left: 20rem/@base;
+        color: #833B0B;
+    }
+}
+
+.mmm_category{
+    ul{
+        li{
+            height: 80rem/@base;
+        }
+    }
+}

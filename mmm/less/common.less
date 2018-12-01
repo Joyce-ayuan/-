@@ -1,0 +1,285 @@
+html,body{
+    background-color: #fff;
+}
+
+.imgBox img{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mmm_header {
+    height: 100rem / @base;
+    width: 100%;
+    background-color: @mmmColor;
+    overflow: hidden;
+    position: relative;
+    .logo {
+        margin-left: 80rem/@base;
+        img {
+            width: 380rem / @base;
+            height: 55rem / @base;
+            margin-top: 25rem / @base;
+            margin-left: 20rem / @base;
+        }
+    }
+    .download {
+        img {
+            width: 80rem / @base;
+            height: 80rem / @base;
+            position: absolute;
+            top: 10rem / @base;
+            right: 20rem / @base;
+        }
+    }
+}
+
+.mmm_search {
+    height: 100rem / @base;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    input {
+        height: 60rem / @base;
+        width: 570rem / @base;
+        background-color: #F1F1F1;
+        font-size: 25rem / @base;
+        border-radius: 300rem / @base;
+        margin-left: 20rem / @base;
+        margin-top: 20rem / @base;
+        padding-left: 40rem / @base;
+    }
+    .btn-search {
+        width: 130rem / @base;
+        height: 60rem / @base;
+        background-color: @mmmColor;
+        border-radius: 300rem / @base;
+        color: #fff;
+        text-align: center;
+        line-height: 60rem / @base;
+        position: absolute;
+        top: 20rem / @base;
+        right: 20rem / @base;
+        font-size: 35rem / @base;
+    }
+}
+
+.footer{
+    background-color: #F2F2F2;
+    .mmm_brandSort{
+        height: 70rem / @base;
+        background-color: @mmmColor;
+        .title{
+            height: 70rem / @base;
+            background-color: @mmmColor;
+            position: relative;
+            span{
+                
+                font-size: 30rem / @base;
+                color: #fff;
+                line-height: 70rem / @base;
+                margin-left: 20rem / @base;
+            }
+            img{
+                width: 40rem / @base;
+                height: 40rem / @base;
+                position: absolute;
+                top: 15rem / @base;
+                right: 20rem / @base;
+            }
+        }
+    }
+    
+    .mmm_login{
+        height: 70rem / @base;
+        margin-top: 50rem / @base;
+        border-bottom: 2rem / @base solid #ccc;
+        border-top: 2rem / @base solid #ccc;
+        ul{
+            li{
+                float: left;
+                width: 33.33%;
+                text-align: center;
+                line-height: 70rem / @base;
+                font-size: 25rem / @base;
+                position: relative;
+                &:nth-child(2){
+                    border-left: 2rem / @base solid #ccc;
+                    border-right: 2rem / @base solid #ccc;
+                }
+                img{
+                    position: absolute;
+                    width: 30rem / @base; 
+                    height: 30rem / @base; 
+                    top: 20rem / @base;
+                    left: 40rem / @base;
+                }
+            }
+        }
+    }
+
+    .mmm_under{
+        height: 125rem / @base;
+        background-color: #EFEFEF;
+        padding-top: 30rem / @base;
+        p{
+            font-size: 20rem / @base;
+            text-align: center;
+            &:nth-child(2){
+                color: #61738E;
+            }
+            &:nth-child(1){
+                a:first-child{
+                    color: #FF0101;
+                }
+                a:nth-child(2){
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.paginator{
+    position: relative;
+    span{
+        display: block;
+        width: 165rem / @base;
+        height: 65rem / @base;
+        background: #E0E0E0;
+        text-align: center;
+        line-height: 65rem / @base;
+        &:first-child{
+            position: absolute;
+            top: 0rem / @base;
+            left: 20rem / @base;
+        }
+        &:last-child{
+            position: absolute;
+            top: 0rem / @base;
+            right: 20rem / @base;
+        }
+        &:nth-child(2){
+            margin: 20rem/@base auto;
+            text-align: center;
+            line-height: 65rem / @base;
+        }
+        select{
+            width: 165rem / @base;
+            height: 65rem / @base;
+            border: 1px solid #ccc;
+            padding-left: 50rem / @base;
+            background-color: #fff;
+        }
+        a{
+            color: #000;
+        }
+    }
+}
+
+.mmm_header{
+    position: relative;
+    .tit{
+        text-align: center;
+        line-height: 100rem / @base;
+        span{
+            color: #fff;
+            font-size: 35rem / @base;
+        }
+    }
+    .icon{
+        position: absolute;
+        display: inline-block;
+        a{
+            i{
+                font-size: 50rem / @base;
+                color: #fff;
+                line-height: 100rem / @base;
+                padding-left: 20rem /@base;
+            }
+        }
+
+
+    }
+}
+
+.breadcrumb {
+    height: 75rem / @base;
+    border-bottom: 1rem / @base solid #CACACA;
+    border-top: 1rem / @base solid #CACACA;
+    background-image: linear-gradient(to top, #EDEDED, #fff);
+    p {
+        display: inline-block;
+        font-size: 25rem / @base;
+        color: #000;
+        padding-left: 20rem / @base;
+        line-height: 75rem / @base;
+        a {
+            color: #000;
+        }
+    }
+    button {
+        width: 125rem / @base;
+        height: 55rem / @base;
+        float: right;
+        margin-top: 8rem / @base;
+        margin-right: 15rem / @base;
+        border-radius: 10rem / @base;
+        font-size: 30rem / @base;
+    }
+}
+
+.mmm_category {
+    width: 100%;
+    &>ul{
+        border: 2px solid #ccc;
+        border-radius: 10rem / @base;
+        &>li {
+            background-color: #EDEDED;
+            border-bottom: 2px solid #ccc;
+            font-size: 25rem / @base;
+            line-height: 80rem / @base;
+            position: relative;
+            letter-spacing: 2rem / @base;
+            &:last-child{
+                border-bottom: none;
+            }
+            &>a{
+                color: #000;
+                padding-left: 35rem / @base;
+            }
+            i{
+                position: absolute;
+                right: 30rem / @base;
+                top: 20rem / @base;
+                font-weight: 400;
+                color: #808080;
+                font-size: 40rem / @base;
+            }
+            .box{
+                ul{
+                    border-top: 2px solid #ccc;
+                    background-color: #fff;
+                    a{
+                        color: #000;
+                        display: block;
+                        &:nth-child(3n+3){
+                            li{
+                                border-right: none;
+                            }
+                        }
+                        li{
+                            float: left;
+                            width: 33.3%;
+                            border-bottom: 2px solid #ccc;
+                            border-right: 2px solid #ccc;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+
+}

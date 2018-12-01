@@ -1,0 +1,152 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.content{
+    padding: 0 20rem / @base;
+    .tit{
+        height: 150rem / @base;
+        overflow: hidden;
+        p{
+            font-size: 25rem / @base;
+            padding-top: 35rem / @base;
+        }
+        span{
+            font-size: 20rem / @base;
+            color: #ACADAD;
+            padding: 3rem / @base;
+        }
+    }
+    .desc{
+        .imgBox1{
+            width: 240rem / @base;
+            height: 240rem / @base;
+            float: right;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        p{
+            font-size: 30rem / @base;
+        }
+        .imgBox2{
+            overflow: hidden;
+            width: 100%;
+            padding-left: 20rem / @base;
+            padding-right: 20rem / @base;
+        }
+    }
+    button{
+        width: 100%;
+        height: 60rem / @base;
+        background-color: #FF9000;
+        margin-top: 20rem / @base;
+        color: #fff;
+    }
+    .address{
+     
+        #disstorck{
+            padding: 0 20rem/@base;
+            background-color: #fff;
+            border: 2px solid #eee;
+            width: 270rem / @base;
+            margin: 20rem/@base auto 0;
+            li{
+                font-size: 15rem / @base;
+                text-align: left;
+                padding: 0 40rem/@base;
+                border-bottom: 1px dashed #666;
+                a{
+                    strong{
+                        color: #F2801C;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.code{
+    padding: 20rem / @base;
+}
+
+.comment{
+    .tit{
+        margin-top: 20rem/@base;
+        padding-left: 20rem/@base;
+    }
+    .reply{
+        padding: 0 20rem/@base;
+        .form{
+            border: 2px solid #ccc;
+            textarea{
+                width: 100%;
+            }
+            .ctrl{
+                position: relative;
+                height: 68rem / @base;
+                border-top: 2px solid #ccc;
+                background-color: #FBFBFB;
+                input{
+                    width: 200rem/@base;
+                    height: 66rem/@base;
+                    color: #fff;
+                    background-color: #FF841D;
+                    position: absolute;
+                    top: 0rem / @base;
+                    right: 0rem / @base;
+                }
+            }
+        }
+    }
+    .list{
+        margin-top: 20rem/@base;
+        .ui-border-b{
+            padding: 20rem/@base;
+            .userimg{
+                width: 75rem / @base;
+                height: 75rem / @base;
+                float: left;
+                &>img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .con{
+                overflow: hidden;
+                .name{
+                    .username{
+                        font-size: 20rem / @base;
+                        color: #4C8CBF;
+                        float: left;
+                        padding-left: 20rem/@base;
+                    }
+                    .time{
+                        font-size: 20rem/@base;
+                        color: #666;
+                        float: right;
+                    }
+                }
+                .content{
+                    font-size: 23rem/@base;
+                    img{
+                        width: 22rem/@base;
+                        height: 22rem/@base;
+                    }
+                }
+            }
+        }
+    }
+}
+    

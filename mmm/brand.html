@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/brand.css">
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>品牌详情页</title>
+</head>
+
+<body>
+
+    <div class="mmm_container">
+        <!----------------- 顶部区域 ------------------>
+        <div class="mmm_header">
+            <div class="icon">
+                <a href="javascript:history.back()">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/header_logo.png" alt="">
+                </a>
+            </div>
+            <div class="download">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!----------------- 搜索功能 ------------------>
+        <div class="mmm_search">
+            <input type="text" placeholder="请输入你想比价的商品">
+            <div class="btn-search">搜索</div>
+        </div>
+        <!----------------- 面包屑 ------------------>
+        <div class="breadcrumb clearfix">
+            <p>
+                <a href="index.html">首页</a> >
+                <a class="category" href="brandTitle.html">全部分类</a> >
+                <a class="tit" href="#"></a>
+            </p>
+        </div>
+        <!----------------- 排行标题 ------------------>
+        <div class="sort">
+            <p>品牌电视哪个牌子好</p>
+        </div>
+        <!----------------- 商品分类 ------------------>
+        <div class="cate">
+            <ul>
+                <!-- 坑 -->
+            </ul>
+        </div>
+        <!----------------- 排行标题 ------------------>
+        <div class="sort">
+            <p>平板电视产品销售排行</p>
+        </div>
+        <!----------------- 产品销售排行 ------------------>
+        <div class="market">
+            <ul>
+                <!-- 坑 -->
+            </ul>
+        </div>
+        <!----------------- 排行标题 ------------------>
+        <div class="sort">
+                <p>平板电视最新评论</p>
+        </div>
+        <!----------------- 最新评论 ------------------>
+        <div class="updateCom">
+            <ul>
+                <li><a href="#">
+                    <div class="up">
+                        <div class="imgBox">
+                            <img src="" alt="">
+                        </div>
+                        <div class="tit">
+                            <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <div class="arrow">
+                            <i class="fa fa-sort-up (alias)"></i>
+                        </div>
+                        <div class="info">
+                            <div class="top">
+                                <span class="author">g**n:</span>
+                                <span class="time">2018/12/1</span>
+                            </div>
+                            <div class="main">
+                                <p>"双12抢的单，14号收到货，速度奇快。特意使用了10来天，对产品有了一点的操控和了解，才来评价! 超级电视超级之处：1，颜值高，整体简洁，窄边框，前面板只有一个Letv的logo指示灯，无其他按键占用面板空间，外观简洁大气，边框做工精细。 2、操作简便，并可启用语音遥控，网络接入速度快，操作系统简洁，一目了然，运行速度相当流畅。 3、内容：乐视自家的视频APP内容相当丰富，科学归类，能快速找到想看的节目，第三方软件安装也方便，即使未登陆乐视会员，也能观看到高清影片及电视直播。 超级电视相对其他电视，有着很大的竞争优势。买这个电视，物有所值"</p>
+                            </div>
+                            <div class="bottom">
+                                <p>购买自：天猫超市</p>
+                            </div>
+                        </div>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <!----------------- 底部区域 ------------------>
+        <div class="footer">
+            <!-- 登录区域 -->
+            <div class="mmm_login">
+                <ul class="clearfix">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a id="toTop" href="#"> <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a></li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmm_under">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p> <a href="#">m.manmanbuy.com</a> </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="sortTmp">
+        {{ each result v i }}
+            <li><a href="#">
+                <div class="num">
+                    {{ if i === 0 }}
+                        <span style="background-color: #F10E0E">{{i+1}}</span>
+                    {{ else if i === 1 }}
+                        <span style="background-color: #FF9315">{{i+1}}</span>
+                    {{ else if i === 2 }}
+                        <span style="background-color: #88DE57">{{i+1}}</span>
+                    {{ else }}
+                        <span>{{i+1}}</span>
+                    {{ /if }}
+                </div>
+                <div class="rigth">
+                    <p>{{v.brandName}}</p>
+                    <p>{{v.brandInfo}}</p>
+                    <div class="icon">
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                </div>
+            </a></li>
+        {{ /each }}
+    
+    </script>
+
+
+    <script type="text/html" id="marketTmp">
+        {{ each result v i }}
+            <li data-productid="{{v.productId}}"><a href="#">
+                <div class="imgBox">
+                    {{#v.productImg}}
+                </div>
+                <div class="right">
+                    <p class="tit">{{v.productName}}</p>
+                    <p>{{v.productPrice}}</p>
+                    <p class="bottom">
+                        <span class="pdl">{{v.productQuote}}</span>
+                        <span>{{v.productCom}}</span>
+                    </p>
+                </div>
+            </a></li>
+        {{ /each }}
+    </script>
+
+    <script type="text/html" id="comTmp">
+        {{ each result v i }}
+            <li><a href="#">
+                <div class="up">
+                    <div class="imgBox">
+                        <img src="{{}}" alt="">
+                    </div>
+                    <div class="tit">
+                        <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="arrow">
+                        <i class="fa fa-sort-up (alias)"></i>
+                    </div>
+                    <div class="info">
+                        <div class="top">
+                            <span class="author">{{v.comName}}</span>
+                            <span class="time">{{v.comTime}}</span>
+                        </div>
+                        <div class="main">
+                            <p>{{v.comContent}}</p>
+                        </div>
+                        <div class="bottom">
+                            <p>{{v.comFrom}}</p>
+                        </div>
+                    </div>
+                </div>
+            </a></li>
+        {{ /each }} 
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/brand.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/monctrlGoods.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mmm_container">
+        <!----------------- 顶部区域 ------------------>
+        <div class="mmm_header">
+                <div class="icon">
+                    <a href="javascript:history.back()">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                </div>
+                <div class="tit">
+                    <span>国内折扣</span>
+                </div>
+                <div class="download">
+                    <a href="#">
+                        <img src="./images/header_app.png" alt="">
+                    </a>
+                </div>
+        </div>
+        <!----------------- 内容区域 ------------------>
+        <div class="content">
+            <!-- 坑 -->
+        </div>
+        <!----------------- 二维码 ------------------>
+        <div class="code">
+            <img src="./images/mmbweixin2.png" alt="">
+        </div>
+        <!----------------- 评论 ------------------>
+        <div class="comment">
+                <div class="cu-content-pl ui-border-t">
+                        <div class="tit">发表评论</div>
+                        <div class="reply">
+                          <div class="form">
+                          <textarea name="ctl00$ContentBody$txt_nr" id="ctl00_ContentBody_txt_nr" rows="3"></textarea>
+                                              <input name="ctl00$ContentBody$lbl_fbr" id="ctl00_ContentBody_lbl_fbr" value="手机端网友14***154" type="hidden">
+                                              <input name="ctl00$ContentBody$hid_name" id="ctl00_ContentBody_hid_name" value="RIWA 雷瓦 T5 2档家用大功率电吹风2200W" type="hidden">
+                                              <div class="ctrl">
+                                                <input name="ctl00$ContentBody$Button1" value="发表评论" id="ctl00_ContentBody_Button1" class="tjdp" type="submit">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tit" id="newcomment">最新评论</div>
+                      </div>
+        </div>
+        <!----------------- 底部区域 ------------------>
+        <div class="footer">
+            <!-- 登录区域 -->
+            <div class="mmm_login">
+                <ul class="clearfix">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a id="toTop" href="#"> <img       src="http://www.zuyushop.com/wap/images/top.jpg" alt="">    返回顶部</a></li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmm_under">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p> <a href="#">m.manmanbuy.com</a> </p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/html" id="detailsTmp">
+        {{ each result v i }}
+            <div class="tit">
+                <p>{{v.productName}}</p>
+                <span class="shop">{{v.productFrom}}</span>
+                <span class="time">{{v.productTime}}</span>
+                <span class="autor">{{v.productTips}}</span>
+            </div>
+            <div class="desc">
+                <div class="imgBox1">
+                    <img src="./images/download.jpg" alt="">
+                </div>
+                <p>{{v.productInfo}}</p>
+                <div class="imgBox2">
+                    {{#v.productImg}}
+                </div>
+            </div>
+            <button>前往购买</button>
+        {{ /each }}
+    </script>
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/discounDetails.js"></script>
+</body>
+
+</html>

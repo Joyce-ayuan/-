@@ -1,0 +1,56 @@
+// 浏览器样式统一
+@import "normalize";
+// 在normalize的基础上重置掉一些我们不需要的默认样式
+@import "base";
+// 公共头尾CSS
+@import "common";
+// 使用rem布局
+// flexible规定 基准值 = 设计图尺寸 / 10
+@design: 750;
+@base: @design / 10;
+@mmmColor: #FF841D;
+
+.main{
+    ul{
+        li{
+            width: 50%;
+            border-bottom: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            padding: 20rem/@base;
+            float: left;
+            &:nth-child(2n){
+                border-right: none;
+            }
+            a{
+                .imgBox{
+                    width: 280rem / @base;
+                    height: 280rem / @base;
+                    margin: 0 auto;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                p{
+                    &:nth-child(2){
+                        font-size: 25rem / @base;
+                        color: #000;
+                        height: 80rem/@base;
+                        margin-top: 20rem / @base;
+                    }
+                    &:nth-child(3){
+                        color: #FF610A;
+                        font-size: 22rem/@base;
+                        margin-top: 20rem/@base;
+                        height: 50rem/@base;
+                    }
+                    &:last-child{
+                        font-size: 20rem / @base;
+                        color: #8D8E97;
+                        margin-top: 15rem / @base;
+                    }
+                }
+            }
+        }
+    }
+}

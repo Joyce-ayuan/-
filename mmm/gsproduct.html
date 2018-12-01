@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/gsproduct.css">
+    <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./lib/Swiper-4.0.7/dist/css/swiper.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="mmm_container">
+        <!----------------- 顶部区域 ------------------>
+        <div class="mmm_header color">
+            <div class="icon">
+                <a href="javascript:history.back()">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+            </div>
+            <div class="tit">
+                <span>凑单品</span>
+            </div>
+            <div class="download">
+                <a href="#">
+                    <img src="./images/header_app.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!----------------- 下拉头部菜单 ------------------>
+        <div class="dropDown">
+            <div class="icon">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="left">
+                <ul class="clearfix titUl">
+                    <li><a href="#">
+                        <span>一号店</span>
+                        <i class="fa fa-caret-up"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <span>华中</span>
+                        <i class="fa fa-caret-up"></i>
+                    </a></li>
+                    <li><a href="#">
+                        <span>全部价格</span>
+                        <i class="fa fa-caret-up"></i>
+                    </a></li>
+                </ul>
+            </div>
+
+        </div>
+        <!----------------- 下拉内容区域 ------------------>
+        <div class="downInfo down1Info">
+            <ul class="clearfix info1Ul">
+                <!-- 坑 -->
+            </ul>
+        </div>
+        <!----------------- 下拉内容区域 ------------------>
+        <div class="downInfo down2Info">
+            <ul class="clearfix info2Ul">
+                <!-- 坑 -->
+            </ul>
+        </div>
+        <!----------------- 商品内容区域 ------------------>
+        <div class="content">
+            <ul class="clearfix contentUl">
+                <!-- 坑 -->
+            </ul>
+        </div>
+        <!----------------- 底部区域 ------------------>
+        <div class="footer">
+            <!-- 登录区域 -->
+            <div class="mmm_login">
+                <ul class="clearfix">
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">注册</a></li>
+                    <li><a id="toTop" href="#"> <img src="http://www.zuyushop.com/wap/images/top.jpg" alt=""> 返回顶部</a></li>
+                </ul>
+            </div>
+            <!-- 底部 -->
+            <div class="mmm_under">
+                <p>
+                    <a href="javascript:;">手机APP下载</a>
+                    <a href="index.html">慢慢买手机版</a>
+                    -- 掌上比价平台
+                </p>
+                <p> <a href="#">m.manmanbuy.com</a> </p>
+            </div>
+        </div>
+    </div>
+ 
+
+    <script type="text/html" id="infoTmp">
+        {{ each result v i }}
+            <li><a href="#">
+                <div class="imgBox">
+                    <img src="{{v.productImg}}" alt="">
+                </div>
+                <p>{{v.productName}}</p>
+                <div class="down">
+                    <span>{{v.productPrice}}</span>
+                    <button>去凑单</button>
+                </div>
+            </a></li>
+        {{ /each }}
+    </script>
+
+
+    <script type="text/html" id="info1Tmp">
+        {{ each result v i }}
+            <li data-shopId="{{v.shopId}}"><a href="#">
+                <p>{{v.shopName}}</p>
+                <div class="tip">
+                    <i class="fa fa-check"></i>
+                </div>
+            </a></li>
+        {{ /each }}
+    </script>
+
+    <script type="text/html" id="info2Tmp">
+        {{ each result v i }}
+            <li data-areaId="{{v.areaId}}"><a href="#">
+                <p>{{v.areaName}}</p>
+                <div class="tip">
+                    <i class="fa fa-check"></i>
+                </div>
+            </a></li>
+        {{ /each }}
+    </script>
+
+
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/flexible/flexible.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/gsproduct.js"></script>
+</body>
+
+</html>
